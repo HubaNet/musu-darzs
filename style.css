@@ -3,7 +3,7 @@ ul {
     display: flex;
   }
   li{
-    margin-right: 30px;
+    margin-right: 20px;
   }
   nav{
     background-color: green;
@@ -51,7 +51,10 @@ a:hover{
  }
  @media only screen and (max-width: 600px) {
   iframe {
-    width: 450px;
-    height: 350px;
+    width: 90%;
+    height: 300px;
   }
+}
+article{
+  padding: 40px;
 }

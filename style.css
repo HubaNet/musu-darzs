@@ -36,9 +36,22 @@ a:hover{
     display: flex;
     justify-content: center;
     padding: 30px;
+    flex-wrap: wrap;
  }
  #telefons:hover{
     color: rgb(112, 73, 1);
     padding: 30px;
 
  }
+ #galerija{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+   gap: 20px;
+ }
+ @media only screen and (max-width: 600px) {
+  iframe {
+    width: 450px;
+    height: 350px;
+  }
+}

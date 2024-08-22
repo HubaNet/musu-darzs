@@ -1,75 +1,106 @@
-#logo{
-  margin-left: 30px;
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-ul {
-    list-style-type: none;
-    display: flex;
-  }
-  li{
-    margin-right: 20px;
-  }
-  nav{
-    padding: 10px;
-    background-color: green;
-    color: white;
-    display: flex;
-    justify-content: center;
-  }
 
-a{
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+}
+
+nav img#logo {
+    max-width: 100px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
     color: white;
     text-decoration: none;
-}
-a:hover{
-    color: orange;
+    padding: 5px 10px;
 }
 
-  h1{
+nav ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+main {
+    margin-top: 20px;
     text-align: center;
-  }
- main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
- }
- body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: orange;
- }
- #reklamas{
-    display: flex;
-    justify-content: center;
-    padding: 30px;
-    flex-wrap: wrap;
- }
- #telefons:hover{
-    color: rgb(112, 73, 1);
-    padding: 30px;
-
- }
- #galerija{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-   gap: 20px;
- }
- 
- article{
-  padding: 40px;
 }
 
+iframe {
+    width: 100%;
+    max-width: 853px; /* Ensures it doesn't exceed the original width */
+    height: auto;
+    aspect-ratio: 16/9;
+    border: none;
+    border-radius: 8px;
+}
 
-/* mazais ekrans */
- @media only screen and (max-width: 600px) {
-  iframe {
-    width: 90%;
-    height: 300px;
-  }
-  #reklamas{
-    padding: 10px;
-  }
-  article{
+#container-for-shop-articles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+article {
+    border: 1px solid #ccc;
     padding: 20px;
-  }
+    border-radius: 5px;
+    text-align: center;
 }
 
+article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: left;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    #container-for-shop-articles {
+        grid-template-columns: 1fr;
+    }
+}
